@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('amount',10,2)->default(1000);
             $table->decimal('gain', 10,2)->nullable();
             $table->timestamps();
-            $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade')
+            $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
         });
     }
 
