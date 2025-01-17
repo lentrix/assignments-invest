@@ -9,4 +9,10 @@ class Investment extends Model
 {
     /** @use HasFactory<\Database\Factories\InvestmentFactory> */
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function person() {
+        return $this->belongsTo('App\Models\Person');
+    }
 }
